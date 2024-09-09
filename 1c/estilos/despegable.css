@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+
+
+
+:root {
+    --color-barra-lateral: #ffffff; /* changed to white */
+    --shadow-color: 229deg 5% 38%;
+    --color-texto: #333; /* changed to dark gray */
+    --color-texto-menu: #333; /* changed to dark gray */
+    --color-menu-hover: #007a2a; /* changed to green */
+    --color-menu-hover-texto: #ffffff; /* changed to white */
+    --color-boton: #00a33c; /* changed to green */
+    --color-boton-texto: #ffffff; /* changed to white */
+    --color-linea: #b4b4b4; /* changed to light gray */
+    --color-switch-base: #C9CACE; /* changed to light gray */
+    --color-switch-circulo: #f1f1f1; /* changed to light gray */
+    --color-scroll: #c0c0c0; /* changed to light gray */
+    --color-scroll-hover: #868686; /* changed to dark gray */
+    --color-body: #c0c0c003; /* changed to light gray */
+}
+
+
+
+
+.dark-mode {
+    --color-barra-lateral: #2c2d31;
+
+    --color-texto: #ffffff;
+    --color-texto-menu: #6e6e75;
+
+    --color-menu-hover: #000000;
+    --color-menu-hover-texto: #eeeeee;
+
+    --color-boton: #ffffff;
+    --color-boton-texto: #000000;
+
+    --color-linea: #5a5a5a;
+
+    --color-switch-base: #27cd40;
+    --color-switch-circulo: #ffffff;
+
+    --color-scroll: #44454a;
+    --color-scroll-hover: #555555;
+    /* Dark Mode Styles */
+
+.header-bar {
+  background-color: #333; /* Dark gray background for the header */
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+.logo-container {
+  margin-right: 20px;
+}
+
+.logo-container img {
+  height: 40px;
+  width: auto;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px; /* Ajustado para que no se estire demasiado en pantallas muy anchas */
+  background-color: #222; /* Dark background for the main container */
+  color: #ddd; /* Light text color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Darker shadow */
+  margin-top: 60px; /* Ajustado para que no se oculte detrás de la barra superior */
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-add, .btn-search, .btn-toggle, .btn-edit, .btn-disable, .btn-enable, .btn-delete {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add {
+  background-color: #4caf50; /* Darker green */
+  color: white;
+}
+
+.btn-add:hover {
+  background-color: #388e3c; /* Darker green on hover */
+}
+
+.btn-search {
+  background-color: #2196F3; /* Keep blue for search button */
+  color: white;
+}
+
+.btn-search:hover {
+  background-color: #1976d2; /* Darker blue on hover */
+}
+
+#buscador {
+  padding: 10px;
+  border: 1px solid #555; /* Darker border for input */
+  border-radius: 5px;
+  width: 200px;
+  background-color: #333; /* Darker background for input */
+  color: #ddd; /* Light text color */
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-toggle {
+  background-color: #444; /* Darker background for toggle buttons */
+  color: #ddd; /* Light text color */
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.btn-toggle.active {
+  background-color: #2196F3; /* Blue background for active state */
+  color: white;
+}
+
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto; /* Ajustado para que se muestre un scrollbar horizontal si es necesario */
+}
+
+h1 {
+  color: #ddd; /* Light text color */
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th, tbody td {
+  padding: 10px;
+  border: 1px solid #555; /* Darker border for table */
+  text-align: left;
+}
+
+thead th {
+  background-color: #333; /* Darker background for table headers */
+  color: #ddd; /* Light text color */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #2a2a2a; /* Darker background for even rows */
+}
+
+tbody tr:hover {
+  background-color: #3a3a3a; /* Slightly lighter background on hover */
+}
+
+.status-dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.active-dot {
+  background-color: green;
+}
+
+.inactive-dot {
+  background-color: red;
+}
+
+.btn-edit {
+  background-color: #ffc107; /* Keep yellow for edit button */
+  color: black; /* Darker text color for contrast */
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.btn-edit:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+}
+
+.btn-delete {
+  background-color: #dc3545; /* Keep red for delete button */
+  color: white;
+  text-decoration: none;
+}
+
+.btn-delete:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-body);
+    font-family: Arial, sans-serif;
+    background-image: url('../imagenes/fondo.jpg');
+    background-size: cover;
+    animation: backgroundSlideshow 15s infinite;
+    background-size: cover;
+    background-position: center;
+}
+@keyframes backgroundSlideshow {
+    0% {
+        background-image: url('../imagenes/fondo.jpg');
+    }
+    33% {
+        background-image: url('../imagenes/fondo2.jpg');
+    }
+    66% {
+        background-image: url('../imagenes/fondo3.jpg');
+    }
+    100% {
+        background-image: url('../imagenes/fondo.jpg');
+    }
+}
+
+
+/* Menu */
+.menu {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+    right: 15px;
+    top: 15px;
+    z-index: 100;
+}
+
+
+/* Barra Lateral */
+.barra-lateral {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 15px;
+    background-color: var(--color-barra-lateral);
+    transition: width 0.5s ease, background-color 0.3s ease, left 0.5s ease;
+    z-index: 50;
+    box-shadow: var(--shadow-elevation-sidebar-medium);
+}
+
+.mini-barra-lateral {
+    width: 80px;
+}
+
+.barra-lateral span {
+    width: 100px;
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.5s ease, width 0.5s ease;
+}
+
+.barra-lateral span.oculto {
+    opacity: 0;
+    width: 0;
+}
+
+/* Nombre de la página */
+.barra-lateral .nombre-pagina {
+    width: 100%;
+    height: 45px;
+    color: var(--color-texto);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.barra-lateral .nombre-pagina #logo {
+    width: 50px; /* Ajusta el tamaño según lo necesites */
+    height: auto; /* Mantiene la proporción del logo */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.barra-lateral .nombre-pagina span {
+    font-size: 25px;
+    margin-left: 5px;
+}
+
+/* Botón */
+.barra-lateral .boton {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+}
+
+.barra-lateral .boton ion-icon {
+    min-width: 50px;
+    font-size: 25px;
+}
+
+/* Menu Navegación */
+.barra-lateral .navegacion {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.barra-lateral .navegacion::-webkit-scrollbar {
+    width: 5px;
+}
+
+.barra-lateral .navegacion::-webkit-scrollbar-thumb {
+    background-color: var(--color-scroll);
+    border-radius: 5px;
+}
+
+.barra-lateral .navegacion::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-scroll-hover);
+}
+
+.barra-lateral .navegacion li {
+    list-style: none;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.barra-lateral .navegacion a {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: var(--color-texto-menu);
+}
+
+.barra-lateral .navegacion a:hover {
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
+
+.barra-lateral .navegacion ion-icon {
+    min-width: 50px;
+    font-size: 20px;
+}
+
+/* Linea */
+.barra-lateral .linea {
+    width: 100%;
+    height: 1px;
+    margin-top: 15px;
+    background-color: var(--color-linea);
+}
+
+/* Modo Oscuro */
+.barra-lateral .modo-oscuro {
+    width: 100%;
+    margin-bottom: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.barra-lateral .modo-oscuro .info {
+    width: 150px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: var(--color-texto-menu);
+}
+
+.barra-lateral .modo-oscuro ion-icon {
+
+    width: 50px;
+    font-size: 20px;
+}
+
+/* switch */
+.barra-lateral .modo-oscuro .switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.barra-lateral .modo-oscuro .base {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 20px;
+    background-color: var(--color-switch-base);
+    border-radius: 50px;
+}
+
+.barra-lateral .modo-oscuro .circulo {
+    position: absolute;
+    width: 18px;
+    height: 90%;
+    background-color: var(--color-switch-circulo);
+    border-radius: 50%;
+    left: 2px;
+    transition: left 0.5s ease;
+}
+
+.barra-lateral .modo-oscuro .circulo.prendido {
+    left: 15px;
+}
+
+/*---------------> Usuario*/
+.barra-lateral .usuario {
+    width: 100%;
+    display: flex;
+}
+
+.barra-lateral .usuario img {
+    width: 50px;
+    min-width: 50px;
+    border-radius: 10px;
+}
+
+.barra-lateral .usuario .info-usuario {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-texto);
+    overflow: hidden;
+}
+
+.barra-lateral .usuario .nombre-email {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.barra-lateral .usuario .nombre {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.barra-lateral .usuario .email {
+    font-size: 13px;
+}
+
+.barra-lateral .usuario ion-icon {
+    font-size: 20px;
+}
+
+/* main */
+#inbox {
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+}
+
+main {
+    margin-left: 280px;
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+}
+
+main.min-main {
+    margin-left: 110px;
+}
+
+/* Responsive mode */
+@media (max-height: 660px) {
+    .barra-lateral .nombre-pagina {
+        margin-bottom: 5px;
+    }
+
+    .barra-lateral .modo-oscuro {
+        margin-bottom: 3px;
+    }
+}
+
+@media (max-width: 600px) {
+    .barra-lateral {
+        position: fixed;
+        left: -250px;
+    }
+
+    .max-barra-lateral {
+        left: 0;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu ion-icon:nth-child(2) {
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    main.min-main {
+        margin-left: 0;
+    }
+} 
+.cuadro-bienvenida {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    border: 2px solid #28a745;
+}
+
+.cuadro-bienvenida h1 {
+    font-size: 2.5em;
+    color: #28a745;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cuadro-bienvenida p {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Estilos adicionales para el contenido del main */
+.contenido-principal {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contenido-principal h2 {
+    font-size: 2.2em;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.contenido-principal p {
+    font-size: 1.1em;
+    color: #000000;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.contenido-principal ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.contenido-principal ul li {
+    font-size: 1.1em;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.contenido-principal ul li strong {
+    color: #28a745;
+}
+
+
+/* Modo oscuro para el cuadro de bienvenida */
+.dark-mode .cuadro-bienvenida {
+    background: rgba(40, 40, 40, 0.9); /* Fondo oscuro semi-transparente */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    border: 2px solid #28a745; /* Mantener el borde verde para contraste */
+}
+
+.dark-mode .cuadro-bienvenida h1 {
+    font-size: 2.5em;
+    color: #28a745; /* Color verde para contraste con fondo oscuro */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Aumentar el sombra para legibilidad */
+}
+
+.dark-mode .cuadro-bienvenida p {
+    font-size: 1.2em;
+    color: #e0e0e0; /* Color de texto claro */
+    margin-top: 10px;
+}
+
+/* Estilos adicionales para el contenido del main en modo oscuro */
+.dark-mode .contenido-principal {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.dark-mode .contenido-principal h2 {
+    font-size: 2.2em;
+    color: #28a745; /* Color verde para contraste con fondo oscuro */
+    margin-bottom: 20px;
+}
+
+.dark-mode .contenido-principal p {
+    font-size: 1.1em;
+    color: #e0e0e0; /* Color de texto claro */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.dark-mode .contenido-principal ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.dark-mode .contenido-principal ul li {
+    font-size: 1.1em;
+    color: #e0e0e0; /* Color de texto claro */
+    margin-bottom: 10px;
+}
+
+.dark-mode .contenido-principal ul li strong {
+    color: #28a745; /* Color verde para contraste */
+}
+.dark-mode {
+    background-color: #333; /* fondo oscuro */
+    color: #fff; /* texto blanco */
+}
+
+.dark-mode .header-bar {
+    background-color: #444; /* fondo oscuro para la barra de navegación */
+}
+
+.dark-mode .container {
+    background-color: #333; /* fondo oscuro para el contenedor */
+}
+
+.dark-mode .btn-add, .dark-mode .btn-search, .dark-mode .btn-toggle, .dark-mode .btn-edit, .dark-mode .btn-disable, .dark-mode .btn-enable, .dark-mode .btn-delete {
+    background-color: #666; /* fondo oscuro para los botones */
+    color: #fff; /* texto blanco para los botones */
+}
+
+.dark-mode .table-container {
+    background-color: #333; /* fondo oscuro para el contenedor de la tabla */
+}
+
+.dark-mode th, .dark-mode td {
+    background-color: #444; /* fondo oscuro para las celdas de la tabla */
+    color: #fff; /* texto blanco para las celdas de la tabla */
+}
+
+.dark-mode .status-dot {
+    background-color: #666; /* fondo oscuro para los puntos de estado */
+}
+
+.dark-mode .active-dot {
+    background-color: #0f0; /* fondo verde para los puntos de estado activos */
+}
+
+.dark-mode .inactive-dot {
+    background-color: #f00; /* fondo rojo para los puntos de estado inactivos */
+}
+
+/* Modo oscuro para los cuadros */
+body.dark-mode .cuadro,
+body.dark-mode .bienvenida,
+body.dark-mode .noticias,
+body.dark-mode .noticia {
+    background-color: rgba(40, 40, 40, 0.7); /* Fondo oscuro con 70% de opacidad */
+    border: 1px solid rgba(60, 60, 60, 0.5); /* Borde más oscuro con 50% de opacidad */
+    color: #e0e0e0; /* Texto claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    backdrop-filter: blur(8px); /* Desenfoque de fondo */
+}
+
+/* Modo oscuro para el texto de la bienvenida */
+body.dark-mode .bienvenida h1,
+body.dark-mode .bienvenida p {
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Modo oscuro para los títulos de las noticias */
+body.dark-mode .noticias h2,
+body.dark-mode .noticia h3 {
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Modo oscuro para los enlaces en las noticias */
+body.dark-mode .noticias .noticia a {
+    color: #00a33c; /* Mantener el color del enlace en modo oscuro */
+}
+
+body.dark-mode .noticias .noticia a:hover {
+    text-decoration: underline;
+}
+
+
+

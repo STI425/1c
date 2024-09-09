@@ -1,0 +1,181 @@
+
+  .header-bar {
+    background-color: #00a33c;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .logo-container {
+    margin-right: 20px;
+  }
+
+  .logo-container img {
+    height: 40px;
+    width: auto;
+  }
+
+  .container {
+    width: 80%;
+    max-width: 1200px; /* Ajustado para que no se estire demasiado en pantallas muy anchas */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 60px; /* Ajustado para que no se oculte detrás de la barra superior */
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .btn-add, .btn-search, .btn-toggle, .btn-edit, .btn-disable, .btn-enable, .btn-delete {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-add {
+    background-color: #00a33c;
+    color: white;
+  }
+
+  .btn-add:hover {
+    background-color: #007a2a;
+  }
+
+  .btn-search {
+    background-color: #2196F3;
+    color: white;
+  }
+
+  .btn-search:hover {
+    background-color: #0b7dda;
+  }
+
+  #buscador {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  .toggle-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn-toggle {
+    background-color: #e7e7e7;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+  }
+
+  .btn-toggle.active {
+    background-color: #2196F3;
+    color: white;
+  }
+
+  .table-container {
+    margin-top: 20px;
+    overflow-x: auto; /* Ajustado para que se muestre un scrollbar horizontal si es necesario */
+  }
+
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead th, tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  thead th {
+    background-color: #f2f2f2;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .status-dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  .active-dot {
+    background-color: green;
+  }
+
+  .inactive-dot {
+    background-color: red;
+  }
+
+  .btn-edit {
+    background-color: #ffc107;
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+  }
+
+  .btn-edit:hover {
+    background-color: #e0a800;
+  }
+
+  .btn-delete {
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+  }
+
+  .btn-delete:hover {
+    background-color: #c82333;
+  }
+
+  .boton-cerrar-sesion {
+    background-color: #e74c3c; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.boton-cerrar-sesion:hover {
+    background-color: #c0392b; /* Color más oscuro al pasar el cursor */
+}

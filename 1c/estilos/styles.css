@@ -1,0 +1,183 @@
+
+
+.header {
+    background-color: #00a33c;
+    height: 50px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px 0 0;
+}
+
+.logo-container img {
+    height: 60px; 
+    width: auto;  
+}
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 90%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #00a33c; /* Cambia el color del borde al enfocarse */
+    outline: none; /* Elimina el borde predeterminado del navegador */
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00a33c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container button:hover {
+    background-color: #007a2a;
+}
+
+.login-container a {
+    display: block;
+    margin-top: 15px;
+    color: #007a2a;
+    text-decoration: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px; /* Ajusta el tamaño del texto del mensaje de error */
+}
+/* Modo Oscuro */
+.dark-mode {
+    background-color: #121212; /* Fondo oscuro para el modo oscuro */
+    color: #e0e0e0; /* Color de texto claro */
+}
+
+.dark-mode .header {
+    background-color: #1e1e1e; /* Fondo oscuro para la cabecera */
+}
+
+.dark-mode .logo-container img {
+    height: 60px;
+    width: auto;
+}
+
+.dark-mode .login-container {
+    background-color: rgba(33, 33, 33, 0.9); /* Fondo oscuro con transparencia para el formulario de inicio de sesión */
+    color: #e0e0e0; /* Color de texto claro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada para mejor visibilidad en fondo oscuro */
+}
+
+.dark-mode .login-container input[type="email"],
+.dark-mode .login-container input[type="password"] {
+    background-color: #1e1e1e; /* Fondo oscuro para los campos de entrada */
+    color: #e0e0e0; /* Color del texto en los campos de entrada */
+    border: 1px solid #333; /* Borde oscuro para los campos de entrada */
+}
+
+.dark-mode .login-container input[type="email"]:focus,
+.dark-mode .login-container input[type="password"]:focus {
+    border-color: #00a33c; /* Puedes mantener el mismo color de borde en el enfoque */
+}
+
+.dark-mode .login-container button {
+    background-color: #00a33c; /* Fondo del botón */
+    color: white; /* Color del texto del botón */
+}
+
+.dark-mode .login-container button:hover {
+    background-color: #007a2a; /* Color del botón en hover */
+}
+
+.dark-mode .login-container a {
+    color: #00a33c; /* Color de los enlaces en modo oscuro */
+}
+
+.dark-mode .error-message {
+    color: #ff6f6f; /* Color del mensaje de error en modo oscuro */
+}
+
+.dark-mode .barra-lateral {
+    background-color: #333; /* fondo oscuro para la barra lateral */
+    color: #fff; /* texto blanco para la barra lateral */
+}
+
+.dark-mode .modo-oscuro {
+    background-color: #444; /* fondo oscuro para el contenedor del switch de modo oscuro */
+}
+.barra-lateral {
+    position: fixed;
+    top: 650px; /* Ajusta según lo necesites */
+    left: 0;
+    width: 250px; /* Ancho de la barra lateral */
+    height: 100%; /* Altura completa del viewport */
+    background: rgba(0, 0, 0, 0); /* Fondo completamente transparente */
+    color: #fff; /* Color del texto dentro de la barra lateral (opcional) */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0); /* Borde completamente transparente */
+}
+
+.barra-lateral.dark-mode {
+    background-color: #333; /* Fondo oscuro para la barra lateral en modo oscuro */
+    color: #fff; /* Texto blanco en modo oscuro */
+}
+.dark-mode .barra-lateral{
+    position: fixed;
+    top: 650px; /* Ajusta según lo necesites */
+    left: 0;
+    width: 250px; /* Ancho de la barra lateral */
+    height: 100%; /* Altura completa del viewport */
+    background: rgba(0, 0, 0, 0); /* Fondo completamente transparente */
+    color: #fff; /* Color del texto dentro de la barra lateral (opcional) */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0); /* Borde completamente transparente */
+}
+.boton-cerrar-sesion {
+    background-color: #e74c3c; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.boton-cerrar-sesion:hover {
+    background-color: #c0392b; /* Color más oscuro al pasar el cursor */
+}
