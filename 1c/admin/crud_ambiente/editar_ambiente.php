@@ -261,7 +261,7 @@ if (isset($_GET['id_ambiente'])) {
     </div>
 
     <footer>
-        <a href="../../cerrar_sesion.php" class="boton-cerrar-sesion">Cerrar Sesión</a>
+        <a href="../../logout.php" class="boton-cerrar-sesion">Cerrar Sesión</a>
     </footer>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
