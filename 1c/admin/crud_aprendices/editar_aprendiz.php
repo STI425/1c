@@ -187,7 +187,7 @@ $conn->close();
     </div>
 </body>
 </html>
-<a href="../logout.php" class="boton-cerrar-sesion">Cerrar Sesión</a>
+<a href="../../logout.php" class="boton-cerrar-sesion">Cerrar Sesión</a>
 
 
     </main>
