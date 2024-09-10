@@ -206,7 +206,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 </html>
 
-<a href="../logout.php" class="boton-cerrar-sesion">Cerrar Sesión</a>
+<a href="../../logout.php" class="boton-cerrar-sesion">Cerrar Sesión</a>
     </main>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
