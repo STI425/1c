@@ -743,5 +743,23 @@ body.dark-mode .noticias .noticia a:hover {
     text-decoration: underline;
 }
 
+.boton-cerrar-sesion {
+    background-color: #e74c3c; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.boton-cerrar-sesion:hover {
+    background-color: #c0392b; /* Color más oscuro al pasar el cursor */
+}
 
 
